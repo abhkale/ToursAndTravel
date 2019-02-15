@@ -1,3 +1,13 @@
+<ion-nav #navCtrl ></ion-nav>
+<div class="row" *ngIf="showSplash">
+  <div class="jackInTheBox">
+  <img class="logo" src="../../assets/dashboard.svg" />
+  </div>
+  <div class="">
+  <label class="logo_label">TOURS</label>
+  </div>
+</div>
+
 <ion-header>
   <ion-toolbar>
     <ion-title>
@@ -7,14 +17,9 @@
 </ion-header>
 
 <ion-content padding>
- 
-  
-  <div *ngIf="showSplash">
-    <img class="logo" src="../../assets/dashboard.svg" />
-    <label class="logo_label">TOURS</label>
-  </div>
-  <!-- The world is your oyster. -->
-  <!-- <p>If you get lost, the -->
-    <!-- <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p> -->
 
+  <div *ngIf="!showSplash">
+    <button type="button" ion-button class="button_panel" (click)="goToMyPage()">SIGN UP</button>
+    <button type="button" class="button_panel">LOGIN</button>
+  </div>
 </ion-content>
