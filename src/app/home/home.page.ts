@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { timer } from 'rxjs/internal/observable/timer';
-import { NavController } from 'ionic-angular';
-import { LandingPagePage } from '../landing-page/landing-page.page';
+import { NavController } from '@ionic/angular';
+
+import { Router } from '@angular/router';
 
 // @Controller({
  
@@ -12,16 +13,21 @@ import { LandingPagePage } from '../landing-page/landing-page.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  public aboutPage = LandingPagePage;
+  
   @ViewChild('navCtrl') navCtrl: NavController;
   showSplash: boolean = true;
-  constructor() {
-    timer(3000).subscribe(() => this.showSplash = false)
+  constructor(public router : Router) {
+    timer(3000).subscribe(() => this.showSplash = true)
   }
   goToMyPage() {
     // go to the MyPage component
-   
-    this.navCtrl.push(LandingPagePage);
+    this.router.navigateByUrl('/landing-page');
+    
+  }
+
+  goToAgentAsUserPage() {
+    // go to the MyPage component
+    this.router.navigateByUrl('/dashboard');
   }
 
 }

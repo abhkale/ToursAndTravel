@@ -1,25 +1,41 @@
-<ion-nav #navCtrl ></ion-nav>
-<div class="row" *ngIf="showSplash">
-  <div class="jackInTheBox">
-  <img class="logo" src="../../assets/dashboard.svg" />
-  </div>
-  <div class="">
-  <label class="logo_label">TOURS</label>
-  </div>
-</div>
+<ion-nav #navCtrl></ion-nav>
 
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+  <ion-title class="homePage_header">
+    LET US TAKE YOU AWAY...
+  </ion-title>
 </ion-header>
 
-<ion-content padding>
-
-  <div *ngIf="!showSplash">
-    <button type="button" ion-button class="button_panel" (click)="goToMyPage()">SIGN UP</button>
-    <button type="button" class="button_panel">LOGIN</button>
+<div class="logo_section" *ngIf="showSplash">
+  <div class="jackInTheBox">
+    <img class="logo" src="../../assets/airplane-flight-around-the-planet.svg" />
+    <label class="logo_label">M</label>
+    <label class="logo_label">I</label>
+    <label class="logo_label">L</label>
+    <label class="logo_label">E</label>
+    <label class="logo_label">Z</label>
+    <label class="logo_label">T</label>
+    <label class="logo_label">R</label>
+    <label class="logo_label">A</label>
+    <label class="logo_label">V</label>
+    <label class="logo_label">E</label>
+    <label class="logo_label">L</label>
+  
   </div>
+
+</div>
+
+<ion-content padding>
+  <div class="background_image" *ngIf="!showSplash">
+    <div class="row">
+    <h3 class="discover_label col-sm-12">DISCOVER THE WORLD</h3>
+    <h3 class="discover_label col-sm-12">TAKE MEMORIES.</h3>
+    <h3 class="discover_label col-sm-12"> LEAVE ONLY FOOTPRINTS</h3>
+    </div>
+    <div class="row Button_section">
+    <button type="button" ion-button class="button_panel col-sm-12" (click)="goToMyPage()" routerDirection="forward">Walkin User</button>
+    <button type="button" ion-button class="button_panel col-sm-12" (click)="goToAgentAsUserPage()" routerDirection="forward">Agent As User</button>
+  </div>
+</div>
 </ion-content>
+

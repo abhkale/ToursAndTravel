@@ -1,75 +1,80 @@
+@media only screen and (max-width: 600px) { 
 
- .logo{
-        height: 170px;
-        width: 150px;
-    }
-    .logo_label{
-        font-size: 40px;
-    }
-    .button_panel{
+.homePage_header{
+  color: white;
+  background: #008177;
+  border-radius: 3PX;
+  padding: 15PX;
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-style: graphik;
+}
+.logo_section{
+  margin: 10px 0 0 0;
+  background: url(../../assets/travel7.jpg);
+  background-repeat: no-repeat;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+  
+
+
+.jackInTheBox{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50% 0;
+
+.logo{
+  width: 35px;
+  height: 40px;
+}
+.logo_label{
+  background: #301313;
+  // margin: 0px 6px;
+  padding: 8px 5px 0px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+}
+}
+.inner-scroll{
+  margin: 0 !important;
+    padding: 0;
+}
+.background_image{
+    background: url(../../assets/bridge.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+      .discover_label{
+        font-weight: 800;
+        font-size: 20px;
+        margin: 0px 0 15px 0;
+        font-family: cursive;
+        text-align: center;
+      }
+      .Button_section{
+        text-align: end;
+        margin: 35px 0px;
+      }
+      .button_panel{
         padding: 10px;
         border-radius: 4px;
-        margin: 5px 10px;
+        margin: 0px 11px 8px 3px;
         color: white;
-        background: #3E3E64;
-    }
+        // background: #3E3E64;
+        background: #008177;
+        width: 50%;
+        font-weight: 500;
+        font-size: 18px;  
+      }
 
-  
-        .jackInTheBox {
-            -webkit-animation-name: jackInTheBox;
-            animation-name: jackInTheBox;
-          }
-    @-webkit-keyframes jackInTheBox {
-        from {
-          opacity: 0;
-          -webkit-transform: scale(0.1) rotate(30deg);
-          transform: scale(0.1) rotate(30deg);
-          -webkit-transform-origin: center bottom;
-          transform-origin: center bottom;
-        }
-      
-        50% {
-          -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-        }
-      
-        70% {
-          -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
-        }
-      
-        to {
-          opacity: 1;
-          -webkit-transform: scale(1);
-          transform: scale(1);
-        }
-      }
-     
-      
-      @keyframes jackInTheBox {
-        from {
-          opacity: 0;
-          -webkit-transform: scale(0.1) rotate(30deg);
-          transform: scale(0.1) rotate(30deg);
-          -webkit-transform-origin: center bottom;
-          transform-origin: center bottom;
-        }
-      
-        50% {
-          -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-        }
-      
-        70% {
-          -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
-        }
-      
-        to {
-          opacity: 1;
-          -webkit-transform: scale(1);
-          transform: scale(1);
-        }
-      }
-      
+  }
+
+} 
     

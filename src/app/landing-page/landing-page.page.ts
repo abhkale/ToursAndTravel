@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+//import { IonicPage } from '@ionic/angular';
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.page.html',
