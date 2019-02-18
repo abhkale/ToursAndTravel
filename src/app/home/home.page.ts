@@ -17,7 +17,7 @@ export class HomePage {
   @ViewChild('navCtrl') navCtrl: NavController;
   showSplash: boolean = true;
   constructor(public router : Router) {
-    timer(3000).subscribe(() => this.showSplash = true)
+    timer(3000).subscribe(() => this.showSplash = false)
   }
   goToMyPage() {
     // go to the MyPage component
