@@ -15,59 +15,36 @@
 </ion-header>
 
 <ion-content class="scroll-content">
+	<ion-item>
+		<ion-label>Required Service</ion-label>
+		<ion-select placeholder="select" [(ngModel)]="selectService">
+			<ion-select-option value="airticket">Air Ticket</ion-select-option>
+			<ion-select-option value="visa">Visa Assistance</ion-select-option>
+			<ion-select-option value="forex">Forex</ion-select-option>
+			<ion-select-option value="hotelbooking">Hotel Booking</ion-select-option>
+			<ion-select-option value="other">Other</ion-select-option>
+		</ion-select>
+	</ion-item>
 
 	<ion-item>
-		<ion-label position="floating">First Name</ion-label>
-		<ion-input type="text"  class="form-control" placeholder=""></ion-input>
-	</ion-item>
-	<ion-item>
-		<ion-label position="floating">Last Name</ion-label>
-		<ion-input class="form-control" placeholder=""></ion-input>
+		<ion-label position="floating">Name</ion-label>
+		<ion-input type="text" [(ngModel)]="name"></ion-input>
 	</ion-item>
 	<ion-item>
 		<ion-label position="floating">Email</ion-label>
-		<ion-input class="form-control" placeholder=""></ion-input>
-	</ion-item>
-	<ion-item text-wrap>
-		<ion-label class="form_label">
-			We'll never share your email with anyone else.
-		</ion-label>
+		<ion-input type="text" [(ngModel)]="email"></ion-input>
 	</ion-item>
 	<ion-item>
-		<ion-label class="form_label">Male</ion-label>
-		<ion-radio slot="start" value="Male"></ion-radio>
-		
+		<ion-label position="floating">Phone</ion-label>
+		<ion-input type="text" [(ngModel)]="phone"></ion-input>
 	</ion-item>
+	<ion-button class="regButton" (click)="savedata()">Register</ion-button>
 
-	<ion-item>
-		<ion-label class="form_label">Female</ion-label>
-		<ion-radio slot="start" value="Female"></ion-radio>
-	</ion-item>
-	<ion-item>
-		<ion-label class="form_label">City</ion-label>
-		<ion-input class="form-control"></ion-input>
-	</ion-item>
-	<ion-item>
-		<ion-label class="form_label">Country</ion-label>
-		<ion-select placeholder="select">
-			<ion-select-option value="f">India</ion-select-option>
-			<ion-select-option value="m">United States</ion-select-option>
-		</ion-select>
-	</ion-item>
-	<ion-item>
-		<ion-label class="form_label">Create password</ion-label>
-		<ion-input class="form-control"></ion-input>
-	</ion-item>
-	<ion-button class="regButton">Register</ion-button>
-	<ion-item text-wrap>
-		<ion-label class="form_label">
-			By clicking the sign up button you confirm that you accept our Terms of use and Privacy Policy.
-		</ion-label>
-	</ion-item>
+
 </ion-content>
 
-	<ion-footer>
-		<ion-toolbar>
-			<ion-title class="footer_section">Have an account? Log In</ion-title>
-		</ion-toolbar>
-	</ion-footer>
+<ion-footer>
+	<ion-toolbar>
+		<ion-title class="footer_section">Have an account? Log In</ion-title>
+	</ion-toolbar>
+</ion-footer>

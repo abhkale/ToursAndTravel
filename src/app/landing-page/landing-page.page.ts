@@ -8,12 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.page.scss'],
 })
 export class LandingPagePage implements OnInit {
-
+  saveData: any;
+  name:string;
+  email:any;
+  phone:number;
+  selectService:any;
   constructor() {
-    console.log("asbdhsgbk")
-   }
-
-  ngOnInit() {
+    
   }
 
+  ngOnInit() {
+    
+  }
+  savedata() {
+    console.log("name",this.name);
+    console.log("name",this.email);
+    console.log("name",this.phone);
+    console.log("name",this.selectService);
+
+    this.saveData =
+      {
+        "loginInputParam":this.selectService,
+        "Name": this.name,
+        "email": this.email,
+        "phone": this.phone,
+
+      }
+  }
 }
