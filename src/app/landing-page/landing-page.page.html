@@ -8,66 +8,66 @@
 
 
 <ion-header>
-
-  <ion-toolbar>
+	<ion-toolbar>
 		<ion-title class="header_label">Walkin Customer</ion-title>
 		<ion-button color="primary">Back</ion-button>
-  </ion-toolbar>
-
+	</ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="scroll-content">
+
 	<ion-item>
-		<ion-label>First Name</ion-label>
-		<ion-input type="text" position="fixed"></ion-input>
+		<ion-label position="floating">First Name</ion-label>
+		<ion-input type="text"  class="form-control" placeholder=""></ion-input>
 	</ion-item>
 	<ion-item>
-		<ion-label>Last Name</ion-label>
-		<ion-input></ion-input>
+		<ion-label position="floating">Last Name</ion-label>
+		<ion-input class="form-control" placeholder=""></ion-input>
 	</ion-item>
 	<ion-item>
-		<ion-label>Email</ion-label>
-		<ion-input></ion-input>
+		<ion-label position="floating">Email</ion-label>
+		<ion-input class="form-control" placeholder=""></ion-input>
 	</ion-item>
 	<ion-item text-wrap>
-		<ion-label>
+		<ion-label class="form_label">
 			We'll never share your email with anyone else.
 		</ion-label>
 	</ion-item>
 	<ion-item>
-      <ion-label>Male</ion-label>
-      <ion-radio slot="start" value="Male"></ion-radio>
-    </ion-item>
+		<ion-label class="form_label">Male</ion-label>
+		<ion-radio slot="start" value="Male"></ion-radio>
+		
+	</ion-item>
 
-    <ion-item>
-      <ion-label>Female</ion-label>
-      <ion-radio slot="start" value="Female"></ion-radio>
-		</ion-item>
-		<ion-item>
-			<ion-label>City</ion-label>
-			<ion-input></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label>Country</ion-label>
-			<ion-select placeholder="select">
-				<ion-select-option value="f">India</ion-select-option>
-				<ion-select-option value="m">United States</ion-select-option>
-			</ion-select>
-		</ion-item>
-		<ion-item>
-			<ion-label>Create password</ion-label>
-			<ion-input></ion-input>
-		</ion-item>
-		<ion-button>Register</ion-button>
-		<ion-item text-wrap>
-			<ion-label>
-			By clicking the sign up button you confirm that you accept our Terms of use and Privacy 
-			Policy.
-			</ion-label>
-			</ion-item>
-			<ion-footer>
-				<ion-toolbar>
-					<ion-title>Have an account? Log In</ion-title>
-				</ion-toolbar>
-			</ion-footer>
+	<ion-item>
+		<ion-label class="form_label">Female</ion-label>
+		<ion-radio slot="start" value="Female"></ion-radio>
+	</ion-item>
+	<ion-item>
+		<ion-label class="form_label">City</ion-label>
+		<ion-input class="form-control"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label class="form_label">Country</ion-label>
+		<ion-select placeholder="select">
+			<ion-select-option value="f">India</ion-select-option>
+			<ion-select-option value="m">United States</ion-select-option>
+		</ion-select>
+	</ion-item>
+	<ion-item>
+		<ion-label class="form_label">Create password</ion-label>
+		<ion-input class="form-control"></ion-input>
+	</ion-item>
+	<ion-button class="regButton">Register</ion-button>
+	<ion-item text-wrap>
+		<ion-label class="form_label">
+			By clicking the sign up button you confirm that you accept our Terms of use and Privacy Policy.
+		</ion-label>
+	</ion-item>
 </ion-content>
+
+	<ion-footer>
+		<ion-toolbar>
+			<ion-title class="footer_section">Have an account? Log In</ion-title>
+		</ion-toolbar>
+	</ion-footer>
