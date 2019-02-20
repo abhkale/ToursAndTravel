@@ -8,10 +8,11 @@ import { Http, Response, Headers } from '@angular/http';
 export class AppServiceService {
   constructor(private http:Http) { }
 
-  // public saveData(apiFunction: string, param: any): Observable<any> {
+  // public saveData( param: any): Observable<any> {
   //   return this.http.post("ab" + "apiFunction", param)
   //     .map((resp) => resp.json());
   // }
+  
 }
 
 

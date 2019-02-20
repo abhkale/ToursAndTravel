@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AppServiceService } from '../app-service.service';
 //import { IonicPage } from '@ionic/angular';
+import { ToastrService } from 'ngx-toastr';
+
 
 //@IonicPage()
 @Component({
@@ -8,31 +11,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.page.scss'],
 })
 export class LandingPagePage implements OnInit {
-  saveData: any;
-  name:string;
-  email:any;
-  phone:number;
-  selectService:any;
-  constructor() {
-    
+  formData: any;
+  responseFlag: string;
+  name: string;
+  email: any;
+  phone: number;
+  selectService: any;
+  constructor(public appService: AppServiceService,
+    private toastr: ToastrService,
+  ) {
+
   }
 
   ngOnInit() {
-    
+
   }
   savedata() {
-    console.log("name",this.name);
-    console.log("name",this.email);
-    console.log("name",this.phone);
-    console.log("name",this.selectService);
+    console.log("name", this.name);
+    console.log("name", this.email);
+    console.log("name", this.phone);
+    console.log("name", this.selectService);
 
-    this.saveData =
+    this.formData =
       {
-        "loginInputParam":this.selectService,
+        "loginInputParam": this.selectService,
         "Name": this.name,
         "email": this.email,
         "phone": this.phone,
 
       }
+    // this.appService.saveData(JSON.stringify(this.formData)).subscribe((response: any) => {
+    //   this.responseFlag = response;
+    //   if (this.responseFlag && this.responseFlag == "") {
+    //     this.toastr.success("Registered successfully");
+    //   }
+    // })
   }
 }
