@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppServiceService } from '../app-service.service';
 //import { IonicPage } from '@ionic/angular';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 
 //@IonicPage()
@@ -18,7 +19,7 @@ export class LandingPagePage implements OnInit {
   phone: number;
   selectService: any;
   constructor(public appService: AppServiceService,
-    private toastr: ToastrService,
+    private toastr: ToastrService,public router : Router
   ) {
 
   }
@@ -28,9 +29,9 @@ export class LandingPagePage implements OnInit {
   }
   savedata() {
     console.log("name", this.name);
-    console.log("name", this.email);
-    console.log("name", this.phone);
-    console.log("name", this.selectService);
+    console.log("email", this.email);
+    console.log("phone", this.phone);
+    console.log("selectservice", this.selectService);
 
     this.formData =
       {
@@ -40,11 +41,15 @@ export class LandingPagePage implements OnInit {
         "phone": this.phone,
 
       }
-    // this.appService.saveData(JSON.stringify(this.formData)).subscribe((response: any) => {
-    //   this.responseFlag = response;
-    //   if (this.responseFlag && this.responseFlag == "") {
-    //     this.toastr.success("Registered successfully");
-    //   }
-    // })
+    this.appService.saveData(this.formData).subscribe((response: any) => {
+      this.responseFlag = response;
+      if (this.responseFlag && this.responseFlag == "") {
+        this.toastr.success("Registered successfully");
+      }
+    })
+  }
+  backToHome()
+  {
+    this.router.navigateByUrl('/home');
   }
 }

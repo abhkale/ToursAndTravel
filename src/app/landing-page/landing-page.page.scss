@@ -1,7 +1,7 @@
 .header_label{
-    width: 60%;
-    float: left;
-    margin: 7px 5px;
+    width: 56%;
+    float: right;
+    margin: 7px 0px;
 }
 .form_label{
 font-size: 14px;
@@ -13,4 +13,9 @@ white-space: pre-line;
 .footer_section{
     font-size: 14px;
     text-align: center;
+}
+.back_button{
+    background: transparent !important;
+    border: none;
+    // padding: 11px 0px;
 }

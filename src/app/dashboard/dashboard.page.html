@@ -8,37 +8,44 @@
 
 <ion-header>
 	<ion-toolbar>
-		<ion-title class="header_label">Walkin Customer</ion-title>
-		<ion-button color="primary">Back</ion-button>
+		<ion-button class="back_button" (click)="backToHome()">
+			<i class="fa fa-chevron-left" aria-hidden="true"></i>
+		</ion-button>
+		<ion-title class="header_label">Travel Agent</ion-title>
 	</ion-toolbar>
 </ion-header>
-
 <ion-content class="scroll-content">
-	<ion-item>
-		<ion-label>Required Service</ion-label>
-		<ion-select placeholder="select">
-			<ion-select-option value="f">Air Ticket</ion-select-option>
-			<ion-select-option value="m">Visa Assistance</ion-select-option>
-			<ion-select-option value="m">Forex</ion-select-option>
-			<ion-select-option value="m">Hotel Booking</ion-select-option>
-			<ion-select-option value="m">Other</ion-select-option>
-		</ion-select>
-	</ion-item>
 
-	<ion-item>
-		<ion-label position="floating">Name</ion-label>
-		<ion-input type="text"></ion-input>
-	</ion-item>
-	<ion-item>
-		<ion-label position="floating">Email</ion-label>
-		<ion-input></ion-input>
-	</ion-item>
-	<ion-item>
-		<ion-label position="floating">Phone</ion-label>
-		<ion-input></ion-input>
-	</ion-item>
-	<ion-button class="regButton">Register</ion-button>
+	<form [formGroup]="todo" (ngSubmit)="logForm()">
+		<ion-item>
+			<ion-label>Required Service</ion-label>
+			<ion-select placeholder="select" formControlName="requiredService">
+				<ion-select-option value="f">Air Ticket</ion-select-option>
+				<ion-select-option value="m">Visa Assistance</ion-select-option>
+				<ion-select-option value="m">Forex</ion-select-option>
+				<ion-select-option value="m">Hotel Booking</ion-select-option>
+				<ion-select-option value="m">Other</ion-select-option>
+			</ion-select>
+		</ion-item>
 
+		<ion-item>
+			<ion-label position="floating">Name of Travel Agency</ion-label>
+			<ion-input type="text" formControlName="travelAgency"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Name of Co-ordinator</ion-label>
+			<ion-input formControlName="coodinatorName"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Email</ion-label>
+			<ion-input formControlName="email"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Phone</ion-label>
+			<ion-input formControlName="phone"></ion-input>
+		</ion-item>
+		<ion-button type="submit" [disabled]="!todo.valid" class="regButton">Register</ion-button>
+	</form>
 
 </ion-content>
 
