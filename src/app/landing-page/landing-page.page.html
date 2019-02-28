@@ -17,32 +17,33 @@
 </ion-header>
 
 <ion-content class="scroll-content">
-	<ion-item>
-		<ion-label>Required Service</ion-label>
-		<ion-select placeholder="select" [(ngModel)]="selectService">
-			<ion-select-option value="airticket">Air Ticket</ion-select-option>
-			<ion-select-option value="visa">Visa Assistance</ion-select-option>
-			<ion-select-option value="forex">Forex</ion-select-option>
-			<ion-select-option value="hotelbooking">Hotel Booking</ion-select-option>
-			<ion-select-option value="other">Other</ion-select-option>
-		</ion-select>
-	</ion-item>
+	<form [formGroup]="validatecustomer" (ngSubmit)="logForm()">
+		<ion-item>
+			<ion-label>Required Service</ion-label>
+			<ion-select placeholder="select" [(ngModel)]="selectService" formControlName="requiredService">
+				<ion-select-option value="airticket">Air Ticket</ion-select-option>
+				<ion-select-option value="visa">Visa Assistance</ion-select-option>
+				<ion-select-option value="forex">Forex</ion-select-option>
+				<ion-select-option value="hotelbooking">Hotel Booking</ion-select-option>
+				<ion-select-option value="other">Other</ion-select-option>
+			</ion-select>
+		</ion-item>
 
-	<ion-item>
-		<ion-label position="floating">Name</ion-label>
-		<ion-input type="text" [(ngModel)]="name"></ion-input>
-	</ion-item>
-	<ion-item>
-		<ion-label position="floating">Email</ion-label>
-		<ion-input type="text" [(ngModel)]="email"></ion-input>
-	</ion-item>
-	<ion-item>
-		<ion-label position="floating">Phone</ion-label>
-		<ion-input type="text" [(ngModel)]="phone"></ion-input>
-	</ion-item>
-	<ion-button class="regButton" (click)="savedata()">Register</ion-button>
+		<ion-item>
+			<ion-label position="floating">Name</ion-label>
+			<ion-input type="text" [(ngModel)]="name" formControlName="customerName"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Email</ion-label>
+			<ion-input type="text" [(ngModel)]="email" formControlName="email"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Phone</ion-label>
+			<ion-input type="text" [(ngModel)]="phone" formControlName="phone"></ion-input>
+		</ion-item>
+		<ion-button class="regButton" type="submit" [disabled]="!validatecustomer.valid">Register</ion-button>
 
-
+	</form>
 </ion-content>
 
 <ion-footer>

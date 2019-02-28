@@ -3,6 +3,7 @@ import { AppServiceService } from '../app-service.service';
 //import { IonicPage } from '@ionic/angular';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 
 //@IonicPage()
@@ -18,14 +19,24 @@ export class LandingPagePage implements OnInit {
   email: any;
   phone: number;
   selectService: any;
+  validatecustomer: FormGroup;
   constructor(public appService: AppServiceService,
-    private toastr: ToastrService,public router : Router
+    public formBuilder: FormBuilder,
+    private toastr: ToastrService, public router: Router
   ) {
 
   }
 
   ngOnInit() {
-
+    this.validateForm();
+  }
+  validateForm() {
+    this.validatecustomer = this.formBuilder.group({
+      requiredService: ['', Validators.required],
+      customerName: ['', Validators.required],
+      email: ['', [Validators.email, Validators.required]],
+      phone: ['', Validators.required]
+    });
   }
   savedata() {
     console.log("name", this.name);
@@ -48,8 +59,7 @@ export class LandingPagePage implements OnInit {
       }
     })
   }
-  backToHome()
-  {
+  backToHome() {
     this.router.navigateByUrl('/home');
   }
 }
