@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { timer } from 'rxjs/internal/observable/timer';
-import { NavController } from '@ionic/angular';
+// import { NavController } from '@ionic/angular';
 
 import { Router } from '@angular/router';
 
@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
   
-  @ViewChild('navCtrl') navCtrl: NavController;
+  // @ViewChild('navCtrl') navCtrl: NavController;
   showSplash: boolean = true;
   constructor(public router : Router) {
     timer(3000).subscribe(() => this.showSplash = false)
@@ -27,7 +27,7 @@ export class HomePage {
 
   goToAgentAsUserPage() {
     // go to the MyPage component
-    this.router.navigateByUrl('/dashboard');
+    this.router.navigateByUrl('/login');
   }
 
 }

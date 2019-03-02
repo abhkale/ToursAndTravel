@@ -1,14 +1,6 @@
-<ion-nav #navCtrl></ion-nav>
-
-<!-- <ion-header>
-  <ion-title class="homePage_header">
-    LET US TAKE YOU AWAY...
-  </ion-title>
-</ion-header> -->
-
 <div class="logo_section" *ngIf="showSplash">
-  <div class="jackInTheBox">
-    <img class="logo" src="../../assets/airplane-flight-around-the-planet.svg" />
+  
+  <div class="logo_name">
     <label class="logo_label">M</label>
     <label class="logo_label">I</label>
     <label class="logo_label">L</label>
@@ -20,22 +12,20 @@
     <label class="logo_label">V</label>
     <label class="logo_label">E</label>
     <label class="logo_label">L</label>
-  
   </div>
 
 </div>
 
-<ion-content padding>
-  <div class="background_image" *ngIf="!showSplash">
-    <div class="row quotes">
-    <h3 class="discover_label col-sm-12">DISCOVER THE WORLD</h3>
-    <h3 class="discover_label col-sm-12">TAKE MEMORIES.</h3>
-    <h3 class="discover_label col-sm-12"> LEAVE ONLY FOOTPRINTS</h3>
+<ion-content>
+  <div class="homePage" *ngIf="!showSplash">
+    <div class="quotes">
+      <h3 class="discover_label">DISCOVER THE WORLD</h3>
+      <h3 class="discover_label">TAKE MEMORIES.</h3>
+      <h3 class="discover_label"> LEAVE ONLY FOOTPRINTS</h3>
     </div>
-    <div class="row Button_section">
-    <button type="button" ion-button class="button_panel col-sm-12" (click)="goToMyPage()" routerDirection="forward">Walkin User</button>
-    <button type="button" ion-button class="button_panel col-sm-12" (click)="goToAgentAsUserPage()" routerDirection="forward">Agent As User</button>
+    <div class="Button_section">
+      <button type="button" ion-button class="button_panel" (click)="goToMyPage()" routerDirection="forward">Walkin User</button>
+      <button type="button" ion-button class="button_panel" (click)="goToAgentAsUserPage()" routerDirection="forward">Agent As User</button>
+    </div>
   </div>
-</div>
 </ion-content>
-

@@ -8,7 +8,8 @@
     font-size: 19px;
     font-family: -webkit-pictograph;
 }
-.landingPage{
+
+.login_page{
     background: url(../../assets/travelbg.JPG);
     background-repeat: no-repeat;
     position: relative;
@@ -16,8 +17,8 @@
     width: 100%;
     background-size: cover;
     color:white;
-    padding: 10% 0;
-    
+    padding: 30% 0;
+
     .input_label{
         margin: 5px 10px 0;
         font-family: -webkit-pictograph;
@@ -29,12 +30,10 @@
         width: 95%;
         margin: 8px auto;
     }
-    .regButton{
+    .loginbtn{
         width: 95%;
-        margin: 10px 8px;
-        font-weight: 600;
-        font-family: -webkit-pictograph;
-    }
+        margin: 15px 8px 0;
+    }    
 }
 
 .footer_section{
@@ -42,6 +41,4 @@
     text-align: center;
     font-family: -webkit-pictograph;
     color: white;
-
 }
-

@@ -1,0 +1,30 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+
+<ion-header>
+    <ion-toolbar color="secondary">
+            <i class="fa fa-chevron-left back_arrow" (click)="backToHome()" aria-hidden="true" color="light"></i>
+      <ion-title class="header_label">SIGN IN</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="login_page">
+      <label class="input_label">Name</label>
+      <ion-input type="text" class="inputbox" [(ngModel)]="name"></ion-input>
+      <label class="input_label">Email</label>
+      <ion-input type="text" class="inputbox" [(ngModel)]="email"></ion-input>
+      <label class="input_label">Phone</label>
+      <ion-input type="text" class="inputbox" [(ngModel)]="phone"></ion-input>
+      <label class="input_label">PAN NO</label>
+      <ion-input type="text" class="inputbox" [(ngModel)]="pancard"></ion-input>
+    <ion-button color="light" class="loginbtn" (click)="gotosignup()">SignIn</ion-button>
+  </div>
+  </ion-content>
+  

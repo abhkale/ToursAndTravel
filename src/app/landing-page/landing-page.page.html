@@ -8,46 +8,43 @@
 
 
 <ion-header>
-	<ion-toolbar>
-		<ion-button class="back_button" (click)="backToHome()">
-			<i class="fa fa-chevron-left" aria-hidden="true"></i>
-		</ion-button>
+	<ion-toolbar color="secondary" class="traveltoolbar-container">
+		<i class="fa fa-chevron-left back_arrow" (click)="backToHome()" aria-hidden="true" color="light"></i>
 		<ion-title class="header_label">Walkin Customer</ion-title>
 	</ion-toolbar>
 </ion-header>
 
-<ion-content class="scroll-content">
-	<form [formGroup]="validatecustomer" (ngSubmit)="logForm()">
-		<ion-item>
-			<ion-label>Required Service</ion-label>
-			<ion-select placeholder="select" [(ngModel)]="selectService" formControlName="requiredService">
+<ion-content>
+	<div class="landingPage">
+		<form [formGroup]="validatecustomer" (ngSubmit)="logForm()">
+
+			<label class="input_label">Required Service</label>
+			<ion-select class="inputbox" placeholder="Select" [(ngModel)]="selectService" formControlName="requiredService" (ionChange)="selectedService($event)">
 				<ion-select-option value="airticket">Air Ticket</ion-select-option>
 				<ion-select-option value="visa">Visa Assistance</ion-select-option>
 				<ion-select-option value="forex">Forex</ion-select-option>
 				<ion-select-option value="hotelbooking">Hotel Booking</ion-select-option>
 				<ion-select-option value="other">Other</ion-select-option>
 			</ion-select>
-		</ion-item>
 
-		<ion-item>
-			<ion-label position="floating">Name</ion-label>
-			<ion-input type="text" [(ngModel)]="name" formControlName="customerName"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label position="floating">Email</ion-label>
-			<ion-input type="text" [(ngModel)]="email" formControlName="email"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label position="floating">Phone</ion-label>
-			<ion-input type="text" [(ngModel)]="phone" formControlName="phone"></ion-input>
-		</ion-item>
-		<ion-button class="regButton" type="submit" [disabled]="!validatecustomer.valid">Register</ion-button>
+			<label class="input_label">Name</label>
+			<ion-input type="text" class="inputbox" [(ngModel)]="name" formControlName="customerName"></ion-input>
 
-	</form>
+			<label class="input_label" *ngIf="showcommentbox">Comment</label>
+			<ion-input type="text" class="inputbox" [(ngModel)]="comment" *ngIf="showcommentbox" formControlName="customerName"></ion-input>
+
+			<label class="input_label">Email</label>
+			<ion-input type="text" class="inputbox" [(ngModel)]="email" formControlName="email"></ion-input>
+
+			<label class="input_label">Phone</label>
+			<ion-input type="text" class="inputbox" [(ngModel)]="phone" formControlName="phone"></ion-input>
+
+			<ion-button color="light" type="submit" class="regButton" [disabled]="!validatecustomer.valid">Register</ion-button>
+		</form>
+	</div>
 </ion-content>
-
 <ion-footer>
-	<ion-toolbar>
-		<ion-title class="footer_section">Have an account? Log In</ion-title>
+	<ion-toolbar color="secondary">
+		<ion-title color="secondary" class="footer_section">Have an account? Log In</ion-title>
 	</ion-toolbar>
 </ion-footer>

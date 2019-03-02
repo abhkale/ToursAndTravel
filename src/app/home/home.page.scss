@@ -1,17 +1,4 @@
-@media only screen and (max-width: 600px) { 
-
-.homePage_header{
-  color: white;
-  background: #0E142C;
-  border-radius: 3PX;
-  padding: 15PX;
-  width: 100%;
-  height: 50px;
-  font-weight: bold;
-  font-style: graphik;
-}
 .logo_section{
-  margin: 10px 0 0 0;
   background: url(../../assets/travelbg.JPG);
   background-repeat: no-repeat;
       position: relative;
@@ -19,32 +6,22 @@
       width: 100%;
       background-size: cover;
   
-
-
-.jackInTheBox{
+.logo_name{
     display: flex;
     justify-content: space-evenly;
     margin: 50% 0;
 
-.logo{
-  width: 35px;
-  height: 40px;
-}
 .logo_label{
-  background: #301313;
-  // margin: 0px 6px;
-  padding: 8px 5px 0px;
-  color: white;
+  background: white;
+  padding: 7px 6px 5px;
+  color: #0E142C;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
+  border-radius: 5px 10px 2px 9px;
 }
 }
 }
-.inner-scroll{
-  margin: 0 !important;
-    padding: 0;
-}
-.background_image{
+.homePage{
     background: url(../../assets/travelbg.JPG);
     background-repeat: no-repeat;
     position: relative;
@@ -54,34 +31,27 @@
     .quotes{
       color:white;
       padding: 30% 0 0 0;
-    box-sizing: border-box;
-    }
+      box-sizing: border-box;
+    
       .discover_label{
         font-weight: 800;
         font-size: 20px;
-        margin: 0px 0 15px 0;
+        margin: 0px 10px 15px 10px;
         font-family: cursive;
         text-align: center;
       }
-      .Button_section{
+    }
+    .Button_section{
         margin: 35px 0px;
-        text-align: center;
-      }
+      
       .button_panel{
         padding: 10px;
         border-radius: 4px;
-        margin: 0px 0px 15px 15px;
-        color: black;
-        background: white;
-        width: 60%;
+        margin: 10px 8px;
         font-weight: 500;
-        font-size: 18px;  
+        font-size: 18px;
+        width: 95%;
+        background: white;
       }
-
-  }
-
-} 
-.inner-scroll.scroll-y.overscroll{
-  padding: 0!important;
-}
-    
+    }
+  }    
